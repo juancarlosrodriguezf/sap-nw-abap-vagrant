@@ -100,4 +100,9 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "scripts/provision/startup.sh"
   config.vm.provision "shell", path: "scripts/provision/post_install.sh"
   config.vm.provision "shell", path: "scripts/provision/finalize.sh"
+
+  config.vm.provision "shell", path: "scripts/addons/install_nodejs.sh"
+  config.vm.provision "shell", path: "scripts/addons/install_ssl_certificates.sh"
+  config.vm.provision "shell", path: "scripts/addons/install_abapgit.sh"
+
 end
